@@ -7,17 +7,21 @@ tags:
 - docker
 ---
 
+# 概述
+
+**架构图**
+
 ![Docker Architecture diagram](../images/docker-architecture.png)
 
 
 
-docker run 执行流程
+`docker run` **执行流程**
 
 ![Docker Run](../images/docker-run.png)
 
 
 
-docker 虚拟机对比
+**与虚拟机对比**
 
 |            |       Docker容器        |        虚拟机（VM）         |
 | :--------: | :---------------------: | :-------------------------: |
@@ -28,5 +32,18 @@ docker 虚拟机对比
 | 软件亲和性 |     面向软件开发者      |       面向硬件运维者        |
 |  部署速度  |       快速，秒级        |        较慢，10s以上        |
 
+# 常用命令
 
+## 镜像命令
 
+- docker images
+
+  ```shell
+  docker images
+  	-a
+  	-q
+  ```
+
+  
+
+## 容器命令
