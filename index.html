@@ -155,6 +155,198 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/20/Mac%E5%8D%B8%E8%BD%BDDocker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lanzl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lanzl">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/09/20/Mac%E5%8D%B8%E8%BD%BDDocker/" class="post-title-link" itemprop="url">Mac卸载Docker</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-09-20 20:33:32 / 修改时间：20:40:33" itemprop="dateCreated datePublished" datetime="2023-09-20T20:33:32+08:00">2023-09-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>运行下面命令卸载docker</li>
+</ol>
+<p><code>/Applications/Docker.app/Contents/MacOS/uninstall</code></p>
+<ol start="2">
+<li>删除应用程序中 docker.app</li>
+<li>删除以下目录</li>
+</ol>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/Library/Containers/com.docker.docker</span><br><span class="line">rm -rf ~/Library/Group\ Containers/group.com.docker</span><br><span class="line">rm -rf ~/Library/Preferences/com.docker.docker.plist</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>如需重装docker，需要重启电脑</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/10/Docker%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lanzl">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lanzl">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/09/10/Docker%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Docker学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-09-10 22:55:35" itemprop="dateCreated datePublished" datetime="2023-09-10T22:55:35+08:00">2023-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-20 17:06:29" itemprop="dateModified" datetime="2023-09-20T17:06:29+08:00">2023-09-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>架构图</strong></p>
+<p><img src="/../images/docker-architecture.png" alt="Docker Architecture diagram"></p>
+<p><code>docker run</code> <strong>执行流程</strong></p>
+<p><img src="/../images/docker-run.png" alt="Docker Run"></p>
+<p><strong>与虚拟机对比</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Docker容器</th>
+<th align="center">虚拟机（VM）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">操作系统</td>
+<td align="center">与宿主机共享OS</td>
+<td align="center">宿主机OS上运行虚拟机OS</td>
+</tr>
+<tr>
+<td align="center">存储大小</td>
+<td align="center">镜像小，便于存储与传输</td>
+<td align="center">镜像庞大</td>
+</tr>
+<tr>
+<td align="center">运行性能</td>
+<td align="center">几乎无额外性能损失</td>
+<td align="center">操作系统额外的CPU、内存消耗</td>
+</tr>
+<tr>
+<td align="center">移植性</td>
+<td align="center">轻便、灵活，适应于Linux</td>
+<td align="center">笨重，与虚拟化技术耦合度高</td>
+</tr>
+<tr>
+<td align="center">软件亲和性</td>
+<td align="center">面向软件开发者</td>
+<td align="center">面向硬件运维者</td>
+</tr>
+<tr>
+<td align="center">部署速度</td>
+<td align="center">快速，秒级</td>
+<td align="center">较慢，10s以上</td>
+</tr>
+</tbody></table>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><ul>
+<li><p>docker images</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br><span class="line">	-a</span><br><span class="line">	-q</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/10/Linux%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3821,20 +4013,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
