@@ -36,14 +36,43 @@ tags:
 
 ## 镜像命令
 
-- docker images
+- `docker images [OPTIONS] [REPOSITORY[:TAG]]`
+
+- `docker search [OPTIONS] TERM`
+
+- `docker pull [OPTIONS] NAME[:TAG|@DIGEST]`
+
+- `docker system df [OPTIONS]`
+
+- `docker rmi [OPTIONS] IMAGE [IMAGE...]`
 
   ```shell
-  docker images
-  	-a
-  	-q
+  docker rmi -f 镜像ID
+  docker rmi -f 镜像名1:TAG 镜像名2:TAG
+  docker rmi -f $(docker images -qa)
   ```
 
-  
+- 
 
 ## 容器命令
+
+- `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+
+  ```shell
+  # 常用OPTIONS
+  --name="容器名称"	 为容器指定一个名称
+  -d								启动守护式容器
+  -i								以交互模式运行容器
+  -t								为容器重新分配一个伪输入终端
+  -P								随机端口映射
+  -p								指定端口映射
+  ```
+
+- `docker ps [OPTIONS]`
+
+- 
+
+
+
+虚悬镜像 dangling image
+
